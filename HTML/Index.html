@@ -8,6 +8,12 @@
     <title>Aprendiendo CSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+            .borde{
+        border-style: solid;
+                border-width: 4px;
+    }
+    </style>
 </head>
 
 <body>
@@ -16,14 +22,76 @@
     <div class="container" style="background-color:yellow">
       <!--    .row*3>h1 -->
         <div class="row" style="background-color:green">
-            <h1>Fila1</h1>
+
+            <!--
+            GRID PARA COLUMNAS
+        1 1 1 1 1 1 1 1 1 1 1 1 = 12
+        
+        2   2   2   2   2   2   = 12
+        
+        3     3     3     3     = 12
+        
+        3     2   3     1  3    = 12
+        
+-->
+       
+        <h1>Fila1</h1>
+        <!--            .col-md-4*3>h2     EMMET  -->
+        <!-- md se reduce en 990px -->
+        <div class="col-md-4 borde">
+            <h2>Columna md 4 - 1</h2>
+        </div>
+        <div class="col-md-4 borde">
+            <h2>Columna md 4 - 2</h2>
+        </div>
+        <div class="col-md-4 borde">
+            <h2>Columna md 4 - 3</h2>
+        </div>
+              
         </div>
         <div class="row" style="background-color:blue">
             <h1>Fila2</h1>
+        <!--    .col-sm-3.borde*4>h3 EMMET -->
+        <!-- sm se reduce en 768px -->
+        <div class="col-sm-3 borde">
+            <h3>CSM3 - 1</h3>
+        </div>
+        <div class="col-sm-3 borde">
+            <h3>CSM3 - 2</h3>
+        </div>
+        <div class="col-sm-3 borde">
+            <h3>CSM3 - 3</h3>
+        </div>
+        <div class="col-sm-3 borde">
+            <h3>CSM3 - 4</h3>
+        </div>
         </div>
         <div class="row" style="background-color:red">
             <h1>Fila3</h1>
+            <!--    .col-lg-6.borde*2>h3 EMMET -->
+        <!-- sm se reduce en 1200px -->
+        <div class="col-lg-6 borde">
+            <h3>CLG6 - 1</h3>
         </div>
+        <div class="col-lg-6 borde">
+            <h3>CLG6 - 2</h3>
+        </div>
+        </div>
+        
+        <!--   .row>.col-xs-2.borde+.col-xs-5.borde*2>h2 EMMET -->
+        <!--   xs no se reduce -->
+        <div class="row">
+            <div class="col-xs-2 borde">
+                <h2>CXS2 - 1</h2>
+            </div>
+            <div class="col-xs-5 borde">
+                <h2>CXS5 - 2</h2>
+            </div>
+            <div class="col-xs-5 borde">
+                <h2>CXS5 - 3</h2>
+            </div>
+        </div>
+        
         <h1>Hola estoy dentro del div</h1>
     </div>
 </body>
