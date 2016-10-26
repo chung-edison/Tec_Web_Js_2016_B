@@ -13,3 +13,7 @@
 ```
 
 - `-c10` es el comando para que el cache dure 10ms
+
+# Clase 3
+
+## Bootstrap
