@@ -68,7 +68,7 @@ El HTML se escribe en forma de «etiquetas», rodeadas por corchetes angulares (
 ## Desarrollo del informe
 
 <a name="pagweb"></a>
-### Página web con HTML
+### Página web con HTML y CSS
 
 Abrimos la carpeta HTML como un proyecto de Brackets y creamos un nuevo archivo `Index.html`. Escribimos `html:5` y presionamos tab para crear automáticamente el formato básico de HTML.
 
@@ -85,7 +85,65 @@ Abrimos la carpeta HTML como un proyecto de Brackets y creamos un nuevo archivo 
 </html>
 ```
 
+Dentro del tag `<title></title>` va el título de la página web, en este caso `Aprendiendo HTML`.
+Dentro del tag `<body></body>` va el contenido de la página web. Para ello usamos cabeceras `<h1>` (la más grande) a `<h6>` (la más pequeña) y párrafos `<p>`.
 
+```
+<h1>Cabecera 1</h1>    
+<h2>Cabecera 2</h2>
+<h3>Cabecera 3</h3>
+...
+
+<p>Párrafo 1</p>
+<p>Párrafo 2</p>
+<p>Párrafo 3</p>
+...
+```
+
+Para añadir una imagen desde otro sitio web se usa el tag `<img src="link de la imagen" alt="texto alternativo">`.
+
+Los estilos CSS se usan para dar ciertas propiedades al contenido, como colores, bordes, entre otros.
+Para añadir una propiedad, se introduce `style` en el tag correspondiente, de la siguiente forma: `<body style="propiedadCSS: valorDeLaPropiedad">`.
+Por ejemplo para dar un color de fondo a toda la página se puede usar `<body style="background-color: color">` donde `color` puede ser el nombre del color o el código hexadecimal correspondiente. Esto se puede hacer también en otros tags.
+
+Para crear listas se utilizan los tags `<ul></ul>` para una lista desordenada y `<ol></ol>` para una lista ordenada. Los elementos de la lista se añaden con el tag `<li></li>`.
+
+```
+<!-- LISTAS NO ORDENADAS unordered list-->
+    <h3>Lista no ordenada</h3>
+    <ul>
+        <!-- list item -->
+        <li>Saint Seiya</li>
+        <li>Hyoga</li>
+        <li>Shiryu</li>
+    </ul>
+    
+    <!-- USANDO EMMET ul>li*3-->
+    <ul>
+        <li>Seiya</li>
+        <li>Hyoga</li>
+        <li>Shiryu</li>
+    </ul>
+    <h3>Lista ordenada</h3>
+    <ol>
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+        <li>Cuatro</li>
+    </ol>
+```
+
+Finalmente, para agregar links, se usa el tag `<a href="url">texto del link<a>`. se puede añadir `target="_blank"` para que el link se abra en una nueva pestaña del navegador en lugar de sobre la página web que creamos. También se puede usar una imagen en lugar del texto del link, simplemente poniendo el tag `<img>` dentro del tag `<a>`. Ejemplo: 
+
+```
+<a href="https://es.wikipedia.org/wiki/Saint_Seiya" target="_blank"><img src="http://vignette2.wikia.nocookie.net/wikiseriesjaponesas/images/f/f8/Saint_seiya2.jpg/revision/latest?cb=20160724220237&path-prefix=es" alt="Caballeros del zodiaco"></a>
+```
+Para poder visualizar la página web se puede abrir el archivo Index.html en cualquier navegador, o iniciar un servidor web en la carpeta que lo contiene, en este caso HTML, y conectándose a `localhost:8080` desde el navegador.
+Poniendo todo lo anterior en práctica, se creó una simple página web ([Código fuente en GitHub](https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/HTML/Index.html)):
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/pagina.jpg?raw=true">
+</p>
 
 <a href="#cabecera">A la cabecera</a>
 
