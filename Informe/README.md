@@ -23,6 +23,8 @@
   * <a href="#html">HTML</a>
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
   * <a href="#pagweb">Página web con HTML</a>
+  * <a href="#inspector">Inspector Web</a>
+  * <a href="#postman">Postman</a>
 - <a href="#conrec">Conclusiones y Recomendaciones</a> 
 
 <a name="tema"></a>
@@ -147,9 +149,70 @@ Poniendo todo lo anterior en práctica, se creó una simple página web ([Códig
 
 <a href="#cabecera">A la cabecera</a>
 
+<a name="inspector"></a>
+
+### Inspector Web
+
+Para utilizar el inspector web se debe hacer clic derecho sobre el elemento de la página web que se quiere inspeccionar.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/Inspeccionar.jpg?raw=true">
+</p>
+
+En el navegador se abre una ventana donde se puede observar el código fuente de la página, así como los estilos del elemento. El inspector web automáticamente marca las líneas del código fuente correspondiente. Se puede modificar el elemento haciendo doble click sobre alguna propiedad, o añadiendo una en la pestaña de estilos.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/inspector.jpg?raw=true">
+</p>
+
+En la pestaña de Red o Network se pueden observar los archivos que se han cargado en la página web, así como su origen, tamaño y tipo, entre otras detalles. También se muestra una línea de tiempo de la carga de la página web, y se pueden filtrar los archivos según sea necesario.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/inspector-network.jpg?raw=true">
+</p>
+
+<a href="#cabecera">A la cabecera</a>
+
+<a name="postman"></a>
+
+### Postman
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/postman-logo.jpg?raw=true">
+</p>
+
+Postman es una extensión gratuita para el navegador Google Chrome que permite probar servicios web fácilmente, basta con indicar la url, el método HTTP (POST, GET, etc.) y los parámetros de la petición. (Fuente: [Notas de software](http://notasdesoftware.com/2014/04/postman-cliente-http-para-probar.html))
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/postman-install.jpg?raw=true">
+</p>
+
+Postman tiene una variedad de métodos HTTP, y se usa con APIs y otros servicios web.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/postman-peticiones.jpg?raw=true">
+</p>
+
+En este caso se realiza una petición GET al servidor local, que contiene la página web de ejemplo, y se puede ver que se obtuvo el código fuente de la misma.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/postman-get.jpg?raw=true">
+</p>
+
+Utilizando el URL de una API, por ejemplo pókeAPI, se pueden realizar requests de cierta información. En este caso podemos recuperar la información sobre los pókemon voladores utilizando el método GET y la URL `http://pokeapi.co/api/v2/type/3/`.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/1-HTML/Informe/Capturas/postman-pokeapi.jpg?raw=true">
+</p>
+
+<a href="#cabecera">A la cabecera</a>
+
 ## Conclusiones y Recomendaciones
 
-- 
+- El lenguaje HTML es fácil de comprender ya que utiliza etiquetas o tags en su código fuente para dar formato al contenido, aunque puede volverse tedioso si se necesita formatear una gran cantidad de información.
+- Utilizar solo HTML para una página web no es conveniente, y tampoco lo es crearla desde cero, ya que los estilos pueden confundirse y como resultado la página no será visualmente atractiva.
+- El inspector web nos permite ver qué parte del código fuente corresponde a cada elemento, así como sus estilos y varias otras estadísticas que son de utilidad para mejorar el servicio de una página web, como por ejemplo el tiempo de carga de los archivos.
+- Postman es una herramienta útil para probar servicios web sin necesidad de crear una aplicación por separado, ya que implementa los métodos HTTP usados comúnmente.
 
 <a href="#cabecera">A la cabecera</a>
 
