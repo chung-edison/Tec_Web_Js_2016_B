@@ -5,6 +5,8 @@
     <title>Document</title>
     <script>
 //        alert('Hola');
+        
+//        VARIABLES
 //        var texto="Texto";
 //        console.log(texto);
 //        var textoNumero="2";
@@ -31,24 +33,79 @@
 //        console.log("Valor undefined:");
 //        console.log(varUndefined);     
         
-        var arregloString = ["1",'2','3'];
-        console.log(arregloString);
         
-        var arregloNumeros = [1,2,3];
-        console.log(arregloNumeros);
+//        ARREGLOS
+//        var arregloString = ["1",'2','3'];
+//        console.log(arregloString);
+//        
+//        var arregloNumeros = [1,2,3];
+//        console.log(arregloNumeros);
+//        
+//        var arregloFloat = [1.2,2.3,3.4123];
+//        console.log(arregloFloat);
+//        
+//        var arregloBool = [false,true,true];
+//        console.log(arregloBool);
+//        
+//        var arregloNull = [null,null,null];
+//        console.log(arregloNull);
+//        
+//        var arregloUndefined = [undefined,undefined,undefined];
+//        console.log(arregloUndefined);
+//        
+//        var arregloTodo = ["Nombre",123,3.1416,true,false,undefined,null,"Apellido"];
+//        console.log(arregloTodo);
+//        console.log(arregloTodo.length);
         
-        var arregloFloat = [1.2,2.3,3.4123];
-        console.log(arregloFloat);
+//        OBJETOS
         
-        var arregloBool = [false,true,true];
-        console.log(arregloBool);
+        var edison = {
+            'nombre': 'Edison',
+            'apellido': 'Chung',
+            edad: 20,
+            arreglo:['elem1','elem2','elem3'],
+            hermanos:[{
+            nombre: 'Alejandro',
+            apellido: 'Chung'
+            }],
+            getNombre: function() {
+                return this.nombre;
+            },
+            getApellido: function() {
+                return this.apellido;
+            },
+            setApellido: function(nuevoApellido){
+                this.apellido = nuevoApellido;
+            }
+        }
         
-        var arregloNull = [null,null,null];
-        console.log(arregloNull);
+//        console.log('Acceder nombre:');
+//        console.log(edison.nombre);
+//        console.log('Acceder apellido:');
+//        console.log(edison.apellido);
+//        console.log('Acceder hermanos:');
+//        console.log(edison.hermanos);
+//        
+//        function getNombreEdison(){
+//            return edison.nombre;
+//        }
         
-        var arregloUndefined = [undefined,undefined,undefined];
-        console.log(arregloUndefined);
+        console.log('Acceder nombre:');
+        console.log(edison.getNombre());
+        
+//        EN XML
+//        <edison>
+//            <nombre>Edison</nombre>
+//            <apellido>Chung</apellido>
+//            <edad>20</edad>
+//        </edison>
+        
+        console.log(edison);
+        
     </script>
+    
+
+    
 </head>
 <body>
     
