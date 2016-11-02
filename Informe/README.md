@@ -7,7 +7,7 @@
 </p>
 
 ### Tema : `CSS` 
-### Fecha : `2016-11-01`
+### Fecha : `2016-11-02`
 ### Estudiante : `Edison Alejandro Chung Liu`
 ### Profesor : `Tania Calle - Adrian Eguez`
 ### Número de informe : `2`
