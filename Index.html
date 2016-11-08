@@ -59,25 +59,25 @@
         
 //        OBJETOS
         
-        var edison = {
-            'nombre': 'Edison',
-            'apellido': 'Chung',
-            edad: 20,
-            arreglo:['elem1','elem2','elem3'],
-            hermanos:[{
-            nombre: 'Alejandro',
-            apellido: 'Chung'
-            }],
-            getNombre: function() {
-                return this.nombre;
-            },
-            getApellido: function() {
-                return this.apellido;
-            },
-            setApellido: function(nuevoApellido){
-                this.apellido = nuevoApellido;
-            }
-        }
+//        var edison = {
+//            'nombre': 'Edison',
+//            'apellido': 'Chung',
+//            edad: 20,
+//            arreglo:['elem1','elem2','elem3'],
+//            hermanos:[{
+//            nombre: 'Alejandro',
+//            apellido: 'Chung'
+//            }],
+//            getNombre: function() {
+//                return this.nombre;
+//            },
+//            getApellido: function() {
+//                return this.apellido;
+//            },
+//            setApellido: function(nuevoApellido){
+//                this.apellido = nuevoApellido;
+//            }
+//        }
         
 //        console.log('Acceder nombre:');
 //        console.log(edison.nombre);
@@ -90,12 +90,12 @@
 //            return edison.nombre;
 //        }
         
-        console.log('Acceder nombre:');
-        console.log(edison.getNombre());
-        console.log(edison.getApellido());
-        edison.setApellido('Liu');
-        console.log(edison.getApellido());        
-        
+//        console.log('Acceder nombre:');
+//        console.log(edison.getNombre());
+//        console.log(edison.getApellido());
+//        edison.setApellido('Liu');
+//        console.log(edison.getApellido());        
+//        
 //        EN XML
 //        <edison>
 //            <nombre>Edison</nombre>
@@ -103,7 +103,26 @@
 //            <edad>20</edad>
 //        </edison>
         
-        console.log(edison);
+//        console.log(edison);
+        
+        var count=10;
+        var arregloNumero=[];
+        
+        console.log('Empieza');
+        while(count>0){
+            if(count%2==0){
+                console.log('El numero: '+count+' es par');
+            }else{
+                console.log('El numero: '+count+' es impar');
+            }
+            arregloNumero.push(count);
+            count--;
+        }
+        console.log(arregloNumero);
+        arregloNumero.pop();
+        arregloNumero.splice(3,1,11);
+        console.log('Termina');
+        console.log(arregloNumero);
         
     </script>
     
