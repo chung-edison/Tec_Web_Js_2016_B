@@ -153,7 +153,7 @@ Razones para hacer a un sitio más accesible:
   * Fuentes Serif son difíciles de leer.
 - **Evitar contrastes de color pobres**
   * Texto negro en fondo blanco o viceversa es el mejor para personas con discapacidad visual o para equipos dañados.
-- ** Siempre colocar color de fondo**
+- **Siempre colocar color de fondo**
   * Un usuario puede definir sus preferencias de color por defecto, y puede resultar en contrastes pobres.
 
 (Fuente: [w3schools](http://w3schools.bootcss.com/website/web_wai.html))
@@ -206,6 +206,30 @@ Bootstrap es un framework libre y de código abierto para el diseño de sitios w
 
 <a name="tag"></a>
 ### Tags especiales de Bootstrap
+
+Bootstrap incluye varios tags especiales, entre ellos podemos destacar:
+
+- `<small>` que vuelve a un texto más pequeño y más claro.
+- `<code>` que muestra el texto como una sección de código.
+- `<kbd>` que muestra teclas o combinaciones de teclas.
+
+Ejemplo:
+
+```
+<h1>Mi título <small>este texto es más claro</small></h1>
+
+<h2>Mi ejemplo de código</h2>
+<p>El tag para describir imágenes es: <code>&lt;img&gt;</code></p>
+
+<h2>User inputs con Bootstrap</h2>
+
+<p>No está permitido por ejemplo el <kbd><kbd>ctrl</kbd> + <kbd>c</kbd></kbd> ni el <kbd><kbd>ctrl</kbd> + <kbd>v</kbd></kbd>
+</p>
+```
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/3-Bootstrap/Informe/Capturas/tags.jpg?raw=true">
+</p>
 
 <a href="#cabecera">A la cabecera</a>
 
