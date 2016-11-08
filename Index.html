@@ -195,12 +195,32 @@
 //        }
 //        console.log(feedPerRanger(4,2));
         
-        var movie1 = [16, "Candles"];
-        var movie2 = [3, "Men", "and", "a", "Baby"];
-        var eightiesMovies = [movie1, movie2];
+//        var movie1 = [16, "Candles"];
+//        var movie2 = [3, "Men", "and", "a", "Baby"];
+//        var eightiesMovies = [movie1, movie2];
+//        
+//        var infant = eightiesMovies[1][4];
+//        console.log(infant);
         
-        var infant = eightiesMovies[1][4];
-        console.log(infant);
+        console.log(typeof 1);
+        console.log(typeof "1");
+        console.log(typeof []);
+        console.log(typeof {});
+        console.log(typeof true);
+        console.log(typeof false);
+        console.log(typeof 1.2);
+        
+        var arreglo = [1,'2',3,'4',5,'seis'];        
+        function numStrings(list){
+            var x = 0;
+            for(var i = 0; i < list.length; i++){
+                if(typeof list[i] == 'string'){
+                    x++;
+                }
+            }
+            return x;
+        }
+        console.log(numStrings(arreglo));
         
     </script>
     
