@@ -236,10 +236,67 @@ Ejemplo:
 <a name="tabla"></a>
 ### Tablas con Bootstrap
 
+Bootstrap define tablas mediante el tag `<table>`, y tiene varias clases de tablas. Cada fila se define mediante `tr` y cada columna tiene un encabezado `<th>` en la primera fila y varios elementos `<td>` en las siguientes. También define ciertas clases para dar formatos y colores a filas o celdas, como por ejemplo active, success o warning.
+
+```
+<h1>Tabla</h1>
+<!--    table>(tr>th*3)+(tr*2>td*3)-->
+<table class="table table-condensed">
+    <!--       Table Row  -->
+    <tr class="active">
+        <!--           Table Header  -->
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr class="success">
+    <!--           Table Detail  -->
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr class="warning">
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+</table>
+```
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/3-Bootstrap/Informe/Capturas/tabla.jpg?raw=true">
+</p>
+
 <a href="#cabecera">A la cabecera</a>
 
 <a name="form"></a>
 ### Forms con Bootstrap
+
+El CSS de Boostrap contiene una gran variedad de elementos que pueden usarse para crear un formulario, y en la página web del mismo ([CSS - Bootstrap](http://getbootstrap.com/css/)), se pueden encontrar una gran cantidad de ejemplos de estilos y elementos que contiene.
+
+Por ejemplo, este simple formulario para ingreso de email:
+
+```
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm-3">
+        </div>
+    </div>
+</div>
+```
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/3-Bootstrap/Informe/Capturas/form.jpg?raw=true">
+</p>
 
 <a href="#cabecera">A la cabecera</a>
 
@@ -247,7 +304,10 @@ Ejemplo:
 
 ## Conclusiones y Recomendaciones
 
-- 
+- La mejor manera de crear una página web de calidad es seguir las guías y estándares establecidos para garantizar compatibilidad y accesibilidad.
+- Un validador web es de mucha ayuda para detectar errores en el código fuente de una página antes de publicarla.
+- Si se quiere obtener una buena cantidad de visitantes, es recomendable usar SEO para el sitio web.
+- Bootstrap incluye, además de los estilos CSS predefinidos, sus propios tags y elementos que pueden ser de mucha ayuda para crear una página web.
 
 <a href="#cabecera">A la cabecera</a>
 
