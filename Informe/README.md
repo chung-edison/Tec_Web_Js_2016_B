@@ -121,10 +121,42 @@ Usar los estándares más recientes mejora la calidad del sitio web.
 - **Formato de fecha**
   * La ISO definió un formato internacional para las fechas como "aaaa-mm-dd".
 
+(Fuente: [w3schools](http://w3schools.bootcss.com/website/web_quality.html))
+
 <a href="#cabecera">A la cabecera</a>
 
 <a name="wai"></a>
 ### Web Accessibility Initiative (WAI)
+
+WAI es un conjunto de guías para desarrolladores y diseñadores web, sobre cómo volver la web accesible a personas con discapacidades.
+
+El objetivo de estas guías es accesibilidad, pero también ayudaran a que los contenidos web estén disponibles para más navegadores y para usuarios que trabajan en entornos difíciles.
+
+Razones para hacer a un sitio más accesible:
+
+1. Mejora la reputación y la satisfacción del cliente.
+1. Incrementa el número de visitantes.
+1. Permite a los visitantes quedarse más tiempo.
+1. Hace al sitio más utilizable para personas con equipos viejos.
+
+
+- **Recordar "alt"**
+  * Permite dar texto alternativo a una imagen para cuando no se puede mostrar:
+  ```
+  <img src="images/banana.jpg" alt="Banana">
+  ```
+- **No usar tipos de fuente pequeñas**
+- **Escoger el mejor espaciado de letra y línea**
+- **Evitar fuentes con adornos**
+  * Fuentes normales son fáciles de leer.
+  * Fuentes en itálicas no son tan fáciles de leer.
+  * Fuentes Serif son difíciles de leer.
+- **Evitar contrastes de color pobres**
+  * Texto negro en fondo blanco o viceversa es el mejor para personas con discapacidad visual o para equipos dañados.
+- ** Siempre colocar color de fondo**
+  * Un usuario puede definir sus preferencias de color por defecto, y puede resultar en contrastes pobres.
+
+(Fuente: [w3schools](http://w3schools.bootcss.com/website/web_wai.html))
 
 <a href="#cabecera">A la cabecera</a>
 
