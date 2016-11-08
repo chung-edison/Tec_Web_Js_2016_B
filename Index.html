@@ -124,30 +124,34 @@
 //        console.log('Termina');
 //        console.log(arregloNumero);
 //        
-//        var numSheep=4;
-//        var monthNumber=1;
-//        var monthsToPrint=12;
-//        
-//        for(monthNumber;monthNumber<=monthsToPrint;monthNumber++){
-//            numSheep *= 4;
-//            console.log('There will be '+numSheep+' sheep after '+monthNumber+' month(s)');
-//        }
+        var numSheep=4;
+        var monthNumber=1;
+        var monthsToPrint=12;
+        
+        for(monthNumber;monthNumber<=monthsToPrint;monthNumber++){
+            numSheep *= 4;
+            console.log('There will be '+numSheep+' sheep after '+monthNumber+' month(s).');
+            if(numSheep > 10000){
+                numSheep /= 2;
+                console.log('Removing '+numSheep+' sheep from the population.')
+            }
+        }
         
 //        for(var i = 0; i < 10; i++){
 //            console.log(i);
 //        }
         
-        var count=10;
-        
-        console.log('Empieza');
-        while(count>0){
-            if(count%2==0){
-                console.log('El numero: '+count+' es par');
-            }
-            count--;
-        }
-        console.log('Termina');
-        
+//        var count=10;
+//        
+//        console.log('Empieza');
+//        while(count>0){
+//            if(count%2==0){
+//                console.log('El numero: '+count+' es par');
+//            }
+//            count--;
+//        }
+//        console.log('Termina');
+//        
     </script>
     
 
