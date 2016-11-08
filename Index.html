@@ -160,12 +160,25 @@
 //        console.log(respuesta);
 //        console.log(parseInt(respuesta));
         
-        function multiplicar3(numero1,numero2,numero3){
-            return numero1 * numero2 * numero3;
+//        function multiplicar3(numero1,numero2,numero3){
+//            return numero1 * numero2 * numero3;
+//        }
+//        
+//        console.log(multiplicar3(2,6,9));
+//        
+        function maxOf2(x,y){
+            if(x == y){
+                console.log(x+' y '+y+' son iguales.');
+            } else if(x > y){
+                console.log(x+' es mayor que '+y);
+            } else {
+                console.log(y+' es mayor que '+x);
+            }
         }
         
-        console.log(multiplicar3(2,6,9));
-        
+        maxOf2(5,9);
+        maxOf2(9,9);
+        maxOf2(10,9);
         
     </script>
     
