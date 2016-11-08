@@ -131,9 +131,12 @@
         for(monthNumber;monthNumber<=monthsToPrint;monthNumber++){
             numSheep *= 4;
             console.log('There will be '+numSheep+' sheep after '+monthNumber+' month(s).');
-            if(numSheep > 10000){
+            if(monthNumber%4==0){
+                console.log('Removing '+(numSheep*0.75)+' sheep from the population.');
+                numSheep *= 0.25;
+            } else if(numSheep > 10000){
                 numSheep /= 2;
-                console.log('Removing '+numSheep+' sheep from the population.')
+                console.log('Removing '+numSheep+' sheep from the population.');
             }
         }
         
