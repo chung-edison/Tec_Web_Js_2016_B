@@ -163,10 +163,26 @@ Razones para hacer a un sitio más accesible:
 <a name="validacion"></a>
 ### Validación Web
 
+Un validador es un programa de software que revisa las páginas web con los estándares web.
+
+Cuando revisa documentos HTML, XHTML o CSS, el validador retorna una lista de errores encontrados, de acuerdo al estándar escogido.
+
+La validación de todas las páginas web antes de la publicación debe volverse un hábito.
+
+(Fuente: [w3schools](http://w3schools.bootcss.com/website/web_validate.html))
+
 <a href="#cabecera">A la cabecera</a>
 
 <a name="seo"></a>
 ### Search Engine Optimization (SEO)
+
+SEO es el proceso de mejorar el ranking (visibilidad) de un sitio web en motores de búsqueda. Mientras más frecuentemente se encuentre en la lista, se pueden esperar más visitantes.
+
+Considera el funcionamiento de los motores de búsqueda, lo que busca la gente, y los términos de búsqueda ingresados. Optimizar un sitio web puede involucrar editar el contenido para incrementar su relevancia a ciertas palabras clave.
+
+Si un sitio web es nuevo, puede tomar tiempo para que sea descubierto por los motores de búsqueda. Sin embargo, se pueden enviar los sitios directamente a ellos.
+
+(Fuente: [w3schools](http://w3schools.bootcss.com/website/web_search.html))
 
 <a href="#cabecera">A la cabecera</a>
 
