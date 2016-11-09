@@ -242,24 +242,42 @@
 //            alert('Yo, ' + name + '!');
 //        })
         
-        var puzzlers = [function(input){
-            return (3 * input) - 8;
-        }, function(input){
-            return Math.pow((input + 2),3);
-        }, function(input){
-            return (input * input) - 9;
-        }, function(input){
-            return input % 4;
-        }]
+//        var puzzlers = [function(input){
+//            return (3 * input) - 8;
+//        }, function(input){
+//            return Math.pow((input + 2),3);
+//        }, function(input){
+//            return (input * input) - 9;
+//        }, function(input){
+//            return input % 4;
+//        }]
+//        
+//        console.log(puzzlers[0](5));
+//        console.log(puzzlers[1](5));
+//        console.log(puzzlers[2](5));
+//        console.log(puzzlers[3](5));
+//        console.log(puzzlers[0](7));
+//        console.log(puzzlers[1](7));
+//        console.log(puzzlers[2](7));
+//        console.log(puzzlers[3](7));
         
-        console.log(puzzlers[0](5));
-        console.log(puzzlers[1](5));
-        console.log(puzzlers[2](5));
-        console.log(puzzlers[3](5));
-        console.log(puzzlers[0](7));
-        console.log(puzzlers[1](7));
-        console.log(puzzlers[2](7));
-        console.log(puzzlers[3](7));
+        function adventureSelector(userChoice) {
+            if(userChoice==1)
+            return function(){
+                alert('You selected the Vines of Doom!');
+            }
+            if(userChoice==2)
+            return function(){
+                alert('Looks like you want the Lake of Despair!');
+            }
+            if(userChoice==3)
+            return function(){
+                alert('The Caves of Catastrophe!');
+            }
+        }
+        console.log(adventureSelector(1));
+        console.log(adventureSelector(2));
+        console.log(adventureSelector(3));
         
     </script>
     
