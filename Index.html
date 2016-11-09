@@ -261,24 +261,46 @@
 //        console.log(puzzlers[2](7));
 //        console.log(puzzlers[3](7));
         
-        function adventureSelector(userChoice) {
-            if(userChoice==1)
-            return function(){
-                alert('You selected the Vines of Doom!');
-            }
-            if(userChoice==2)
-            return function(){
-                alert('Looks like you want the Lake of Despair!');
-            }
-            if(userChoice==3)
-            return function(){
-                alert('The Caves of Catastrophe!');
-            }
-        }
-        console.log(adventureSelector(1));
-        console.log(adventureSelector(2));
-        console.log(adventureSelector(3));
+//        function adventureSelector(userChoice) {
+//            if(userChoice==1)
+//            return function(){
+//                alert('You selected the Vines of Doom!');
+//            }
+//            if(userChoice==2)
+//            return function(){
+//                alert('Looks like you want the Lake of Despair!');
+//            }
+//            if(userChoice==3)
+//            return function(){
+//                alert('The Caves of Catastrophe!');
+//            }
+//        }
+//        console.log(adventureSelector(1));
+//        console.log(adventureSelector(2));
+//        console.log(adventureSelector(3));
+//        
+        var puzzlers = [
+            function(a){
+            return 8 * a - 10;
+        }, function(a){
+            return (a - 3) * (a - 3) * (a - 3);
+        }, function(a){
+            return a * a + 4;
+        }, function(a){
+            return a % 5;
+        }]
+        var start = 2;
         
+        var applyAndEmpty = function(input,queue){
+            var lim = queue.length;
+            for(var i = 0; i < lim; i++){
+                input = queue.shift()(input);
+            }
+            console.log(queue);
+            return input;
+        }
+        
+        alert(applyAndEmpty(start,puzzlers));
     </script>
     
 
