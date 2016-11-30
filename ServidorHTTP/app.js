@@ -19,6 +19,12 @@ app.post('/TecnologiasWeb', function (req, res) {
         cedula:'0000000000'
     }
     
+    usuario.apellido = 'Chung';
+    usuario.mascotas = [];
+    usuario.casado = false;
+    
+    res.append('token','1234');
+    
     console.log('Lo que tengo en el request es:');
     console.log(req);
     console.log('Lo que tengo en el response es:');
