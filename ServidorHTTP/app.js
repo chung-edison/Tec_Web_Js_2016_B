@@ -19,6 +19,8 @@ var usuarios = [
     }
 ]
 
+var contador = 3;
+
 app.get('/', function (req, res) {
   res.send('Hello World!')
 })
@@ -68,6 +70,41 @@ app.post('/TecnologiasWeb', function (req, res) {
 //    console.log(res.headers);
       
   //no se pueden enviar multiples res.send()
+})
+
+app.post('/Usuario', function (req, res) {
+    
+    console.log(req.query.nombre);
+    console.log(req.query.nombre);
+    
+    if(!req.query.nombre){
+        res.send('No envio el nombre');
+    }
+    
+    if(!req.query.cedula){
+        res.send('No envio la cedula');
+    }
+    
+    var nuevoUsuario = {
+        id:contador+1,
+        nombre:req.query.nombre,
+        cedula:req.query.cedula
+    }
+    
+    usuarios.push(nuevoUsuario);
+    
+    contador = contador++;
+    res.json(nuevoUsuario);
+})
+
+app.put('/Usuario/:idUsuario', function (req, res) {
+    //implementacion
+    //El Usuario Actualizado
+})
+
+app.delete('/Usuario/:idUsuario', function (req, res) {
+    //implementacion
+    //El Usuario Borrado
 })
 
 app.listen(3000, function () {
