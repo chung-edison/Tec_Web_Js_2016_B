@@ -10,7 +10,28 @@ app.get('/TecnologiasWeb', function (req, res) {
 })
 
 app.post('/TecnologiasWeb', function (req, res) {
-  res.send('con post!')
+    
+    //request => req
+    //response => res
+    
+    var usuario = {
+        nombre:'Edison',
+        cedula:'0000000000'
+    }
+    
+    console.log('Lo que tengo en el request es:');
+    console.log(req);
+    console.log('Lo que tengo en el response es:');
+    console.log(res);
+
+    console.log('Cabeceras request:');
+    console.log(req.headers);
+    console.log('Cabeceras response:');
+    console.log(res.headers);
+    
+  res.json(usuario);
+  
+  //no se pueden enviar multiples res.send()
 })
 
 app.listen(3000, function () {
