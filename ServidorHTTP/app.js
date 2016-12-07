@@ -1,4 +1,5 @@
 var express = require('express')
+var fs = require('fs')
 var app = express()
 
 var usuarios = [
@@ -21,8 +22,37 @@ var usuarios = [
 
 var contador = 3;
 
+
+//var quePasa = '';
+//quePasa = 'esta por leer el archivo';
+//console.log(quePasa);
+//
+//fs.readFile('./paginas/pagina.html','utf8',
+//           function(error, archivoLeido){
+//    console.log(error);
+//    console.log(archivoLeido);
+//})
+//
+//quePasa = 'termino de leer el archivo';
+//console.log(quePasa);
+
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+    console.log('antes de leer');
+    var todo = '';
+    fs.readFile('./paginas/pagina.html', 'utf8',
+        function (error, archivoLeido) {
+            todo += archivoLeido;
+            fs.readFile('./paginas/usuario.html', 'utf8',
+                function (error, archivoLeido) {
+                    todo += archivoLeido;
+                    fs.readFile('./paginas/footer.html', 'utf8',
+                        function (error, archivoLeido) {
+                            todo += archivoLeido;
+                            res.send(todo);
+                        })
+                })
+        })
+    console.log('despues de leer');
 })
 
 app.get('/Usuario', function (req, res) {
