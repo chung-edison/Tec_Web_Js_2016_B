@@ -92,7 +92,7 @@ Para salir de node, se presiona `ctrl + c` dos veces.
 
 La otra manera de utilizar Node.js es creando un archivo con la extensión `.js`. Por ejemplo, para calcular la suma de dos números:
 
-```
+```javascript
 var numero1 = 1,
     numero2 = 2;
 
@@ -109,7 +109,66 @@ El código anterior se guarda en un archivo `app.js`, que puede ser ejecutado ab
 <a name="usonpm"></a>
 ### Uso de npm
 
+Para poder publicar un paquete en el registro npm, es necesario poseer una cuenta en el sitio web oficial de [npmjs.com](https://www.npmjs.com/)
 
+Para este ejemplo, se modifica el archivo creado anteriormente, agregándole un module.exports y creando la función imprimirSuma1y2():
+
+```javascript
+module.exports = {
+    imprimirSuma1y2: imprimirSuma1y2,
+}
+
+function imprimirSuma1y2(){
+
+var numero1 = 1,
+    numero2 = 2;
+
+console.log(numero1 + numero2);
+}
+```
+
+En la línea de comandos dentro de la carpeta contenedora de `app.js`, se ejecuta el comando `npm init` y se llenan los campos respectivos para generar el archivo `package.json`. El archivo "main", que en este caso es `app.js` se define en `entry point`.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/7-Node/Informe/Capturas/npm1.jpg?raw=true">
+</p>
+
+Se inicia sesión en la cuenta creada anteriormente mediante el comando `npm login`, y se publica el paquete mediante le comando `npm publish`.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/7-Node/Informe/Capturas/npm2.jpg?raw=true">
+</p>
+
+Se puede ver el paquete publicado en el perfil correspondiente a la cuanta de npm.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/7-Node/Informe/Capturas/npm3.jpg?raw=true">
+</p>
+
+Para utilizar el paquete, primero hay que instalarlo mediante el comando `npm i nombrepaquete`. Si se requiere una instalación global, se añade el parámetro `-g`, caso contrario se instalará localmente en la carpeta seleccionada.
+
+Para probar el paquete, se crea un nuevo archivo `app.js`:
+
+
+```
+var calculadora = require("tecnologiaswebcedison");
+
+console.log(calculadora.imprimirSuma1y2());
+```
+
+Como requiere el paquete subido anteriormente, se instala con el comando `npm i tecnologiaswebcedison`, y se crea una nueva carpeta `node_modules` que contiene el paquete requerido:
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/7-Node/Informe/Capturas/npm4.jpg?raw=true">
+</p>
+
+Al ejecutar `app.js` se obtiene el siguiente resultado y se comprueba que efectivamente funciona el paquete:
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/7-Node/Informe/Capturas/npm5.jpg?raw=true">
+</p>
+
+Finalmente, para eliminar el paquete, se ejecuta el comando `npm uninstall nombrepaquete`.
 
 <a href="#cabecera">A la cabecera</a>
 
@@ -117,7 +176,9 @@ El código anterior se guarda en un archivo `app.js`, que puede ser ejecutado ab
 
 ## Conclusiones y Recomendaciones
 
-- 
+- Node.js es fácil de usar para programar en JavaScript.
+- npm permite publicar y utilizar paquetes creados en JavaScript, para brindar nuevas funcionalidades según sea necesario.
+- Los comandos respectivos son simples y prácticos.
 
 <a href="#cabecera">A la cabecera</a>
 
