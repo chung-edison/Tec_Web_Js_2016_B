@@ -44,7 +44,9 @@ El tema de la práctica es: `npm`
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" width=400>
 </p>
 
-(Fuente: [w3schools](http://w3schools.bootcss.com/website/web_design.html))
+Node.js® es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto en el mundo.
+
+(Fuente: [node.js](https://nodejs.org/es/))
 
 <a href="#cabecera">A la cabecera</a>
 
@@ -54,8 +56,14 @@ El tema de la práctica es: `npm`
 <p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" width=400>
 </p>
-d
-(Fuente: [w3schools](http://w3schools.bootcss.com/website/web_quality.html))
+
+npm es muchas cosas.
+- npm es el gestor de paquetes para Node.js. Fue creado en 2009 como un proyecto open source para ayudar a desarrolladores de JavaScript a compartir fácilmente módulos empaquetados de código.
+- El Registro npm es una colección pública de paquetes de código open-source para Node.js, aplicaciones web de front-end, aplicaciones móviles, robots, routers y otras incontables necesidades de la comundad JavaScript.
+- npm es el cliente de línea de comandos que permite a los desarrolladores instalar y publicar dichos paquetes.
+- npm, Inc, es la empresa que aloja y mantiene todo lo anterior.
+
+(Fuente: [www.npmjs.com](https://www.npmjs.com/about))
 
 <a href="#cabecera">A la cabecera</a>
 
