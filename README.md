@@ -32,3 +32,11 @@ Se encuentra localizado en la carpeta **assets**.
 Acceder mediante URL: `http://localhost:1337/app/index.html`
 
 Si se hacen cambios en los archivos de congif hay que reiniciar el servidor.
+
+## Generar Controladores Sailsjs
+
+Para generar controladores se utiliza el siguiente comando:
+
+```
+> sails generate controller 'NombreControlador'
+```
