@@ -30,3 +30,5 @@ Sails pide opciones si no están definidas:
 
 Se encuentra localizado en la carpeta **assets**.
 Acceder mediante URL: `http://localhost:1337/app/index.html`
+
+Si se hacen cambios en los archivos de congif hay que reiniciar el servidor.
