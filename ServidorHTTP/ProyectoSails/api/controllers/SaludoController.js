@@ -9,9 +9,12 @@ module.exports = {
 	
     hola:function(req,res){
         
+        var params = req.allParams();
+        
         if(req.method=='GET')
         res.json({
-            nombre: 'hola get'
+            nombre: 'hola get',
+            parametros: params
         });
         else if(req.method=='POST')
         res.json({
