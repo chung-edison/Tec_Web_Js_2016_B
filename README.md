@@ -40,3 +40,42 @@ Para generar controladores se utiliza el siguiente comando:
 ```
 > sails generate controller 'NombreControlador'
 ```
+
+## Generar Modelos en Sailsjs
+
+´´´
+> sails generate model NombreModelo
+´´´
+
+## Generar APIs en Sailsjs
+
+´´´
+> sails generate api NombreAPI
+´´´
+
+Un Api es la fusión de un **Controlador** y de un **Modelo**.
+
+# API REST
+
+## Modelo Usuario
+
+### Crear Usuarios
+
+URL:
+
+´http://localhost:1337/Usuario´
+
+Metodo HTTP:
+
+´POST´
+
+Datos:
+
+
+´´´javascript
+{
+    nombre:'Edison',
+    apellido:'Chung',
+    correo:'edison.chung@epn.edu.ec'
+}
+´´´
