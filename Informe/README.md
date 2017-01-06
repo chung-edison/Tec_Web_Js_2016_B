@@ -27,7 +27,6 @@
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
   * <a href="#install">Instalando Sails</a>
   * <a href="#server">Servidor Web de Sails</a>
-  * <a href="#api">Controlador, modelo y API</a>
 - <a href="#conrec">Conclusiones y Recomendaciones</a> 
 
 <a name="tema"></a>
@@ -124,12 +123,74 @@ Para crear un nuevo proyecto con Sails, se debe abrir una consola de comandos en
 >sails new NuevoProyecto
 ```
 
-Sails crea una nueva carpeta con el nombre del proyecto.
+Sails crea una nueva carpeta con el nombre del proyecto. Los archivos relacionados a la página web se encuentran dentro de la carpeta assets, y los archivos HTMl se encuentran dentro de la carpeta app.
 
-<a href="#cabecera">A la cabecera</a>
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/carpeta.jpg?raw=true">
+</p>
 
-<a name="install"></a>
-### Controlador, modelo y API
+Por ejemplo, en la carpeta app se creó un archivo `index.html` al que se le añadió lo siguiente:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Mundo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <img src="../images/holamundo.png" alt="Hola Mundo">
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+Y un archivo `app.js` que contiene lo siguiente:
+
+```
+alert("No es bueno usar alertas.");
+```
+
+En la carpeta styles se creó `estilos.css` que contiene:
+
+```
+body {
+    background-color: darkblue;
+    color: white;
+}
+
+a {
+    color: white;
+}
+```
+
+Una vez creados los archivos, se debe levantar el servidor Web, para lo cual se abre una consola de comandos en la carpeta correspondiente al proyecto Sails, y se ejecuta el comando `sails lift`.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/lift1.jpg?raw=true">
+</p>
+
+Sails pide escoger una de las siguientes opciones para la base de datos:
+
+1. SAFE MODE no altera la base de datos
+2. ALTER MODE altera la base de datos si se hicieron cambios en los modelos
+3. DELETE MODE borra toda la base de datos y rehace los modelos
+
+Sails recomienda no escoger las opciones 2 o 3 si se trabaja con datos de producción.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/lift2.jpg?raw=true">
+</p>
+
+Una vez levantado el servidor Web, se accede a él a través de localhost con el puerto 1337.
+
+Para visualizar los cambios realizados anteriormente en la carpeta app, se utiliza la url `http://localhost:1337/app/index.html`.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/holamundo.jpg?raw=true">
+</p>
 
 <a href="#cabecera">A la cabecera</a>
 
@@ -137,8 +198,9 @@ Sails crea una nueva carpeta con el nombre del proyecto.
 
 ## Conclusiones y Recomendaciones
 
-- 
-- 
+- Sails es un framework bastante útil y sencillo a la hora de crear aplicaciones Web.
+- La estructura de Sails puede parecer compleja cuando se intenta utilizarlo por primera vez, por lo que es recomendable revisar la documentación sobre los conceptos en su sitio Web oficial antes de empezar.
+- Se pueden crear plantillas y utilizarlas a través de todo el sitio Web, en lugar de tener que copiar y modificar cada archivo html para que contengan algunos los mismos elementos.
 
 <a href="#cabecera">A la cabecera</a>
 
