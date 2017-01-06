@@ -27,6 +27,7 @@
 - <a href="#desarrollo">Desarrollo de la Práctica</a>
   * <a href="#install">Instalando Sails</a>
   * <a href="#server">Servidor Web de Sails</a>
+  * <a href="#pipe">Pipeline y Layout</a>
 - <a href="#conrec">Conclusiones y Recomendaciones</a> 
 
 <a name="tema"></a>
@@ -126,7 +127,7 @@ Para crear un nuevo proyecto con Sails, se debe abrir una consola de comandos en
 Sails crea una nueva carpeta con el nombre del proyecto. Los archivos relacionados a la página web se encuentran dentro de la carpeta assets, y los archivos HTMl se encuentran dentro de la carpeta app.
 
 <p align="center">
-<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/carpeta.jpg?raw=true">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/carpeta.JPG?raw=true">
 </p>
 
 Por ejemplo, en la carpeta app se creó un archivo `index.html` al que se le añadió lo siguiente:
@@ -186,10 +187,80 @@ Sails recomienda no escoger las opciones 2 o 3 si se trabaja con datos de produc
 
 Una vez levantado el servidor Web, se accede a él a través de localhost con el puerto 1337.
 
-Para visualizar los cambios realizados anteriormente en la carpeta app, se utiliza la url `http://localhost:1337/app/index.html`.
+Para visualizar los cambios realizados anteriormente en la carpeta app, se utiliza la url `http://localhost:1337/app/index.html`. En este caso aparecerá la alerta creada en `app.js` y "Hola Mundo" de `index.html` con los estilos definidos en `estilos.css`.
 
 <p align="center">
 <img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/holamundo.jpg?raw=true">
+</p>
+
+Todo lo que se quiera mostrar en la página Web debe estar guardado en la carpeta assets, por ejemplo, para mostrar una imagen `holamundo.png` se la debe guardar en la carpeta `assets/images/` y se puede acceder a ella directamente mediante la url `http://localhost:1337/images/holamundo.png`.
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/imagen.JPG?raw=true">
+</p>
+
+<a href="#cabecera">A la cabecera</a>
+
+<a name="pipe"></a>
+### Pipeline y Layout
+
+Dentro de la carpeta `tasks/`, se encuentra el archivo `pipeline.js`, que contiene todos los archivos que deben ser inyectados a los archivos html antes de presentarlos. Es este archivo se puede definir una hoja de estilos general y/o archivos JavaScript que se ejecutaran en todas las páginas del sitio Web.
+
+Por ejemplo, para utilizar la misma hoja de `estilos.css` en todos los archivos html:
+
+```
+// CSS files to inject in order
+//
+// (if you're using LESS with the built-in default config, you'll want
+//  to change `assets/styles/importer.less` instead.)
+var cssFilesToInject = [
+//  'styles/**/*.css'
+    'styles/**/estilos.css'
+];
+```
+
+En la carpeta `views/`, se encuentran las plantillas que Sails inyecta en los archivos html. Estas plantillas contienen partes de código html. `layout.ejs` tiene la estructura completa de la página web, pero no incluye contenidos, mientras que `homepage.ejs` contiene tan solo estos últimos.
+
+Por ejemplo, se puede modificar `layout.ejs` para contener un menú que se mostrará en todo el sitio Web:
+
+```
+...
+<body>
+   <h1>Hola</h1>
+   <ul>
+       <li><a href="/Quito">Quito</a></li>
+       <li><a href="/Guayaquil">Guayaquil</a></li>
+       <li><a href="/Cuenca">Cuenca</a></li>
+       <li><a href="/">Home</a></li>
+   </ul>
+    <%- body %>
+    <h1>Adios</h1>
+...
+```
+
+Y se puede modificar `homepage.ejs` para que contenga otro estilo:
+
+```
+<style>
+    .rojo{
+        background-color:red;
+    }
+</style>
+
+<div class="rojo">
+    <h1>AQUI EMPIEZA EL HOMEPAGE</h1>
+
+    <p>Ya no somos tan noobs en Sailsjs</p>
+
+
+    <h1>AQUI FINALIZA EL HOMEPAGE</h1>
+</div>
+```
+
+El resultado al ingresar a la url `http://localhost:1337/` es el siguiente:
+
+<p align="center">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/home.jpg?raw=true">
 </p>
 
 <a href="#cabecera">A la cabecera</a>
