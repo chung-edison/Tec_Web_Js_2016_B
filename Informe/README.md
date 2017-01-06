@@ -37,7 +37,7 @@ El tema de la práctica es: `Sails`
 <a name="objetivos"></a>
 ## Objetivos
 
-- Aprender sobre Sails y las partes que lo componen.
+- Aprender sobre Sails y sus componentes.
 - Crear un proyecto Sails y levantar su servidor Web.
 - Utilizar los componentes de Sails para modificar el sitio Web.
 
@@ -51,6 +51,8 @@ El tema de la práctica es: `Sails`
 <img src="http://sailsjs.com/images/hero_squid.png">
 </p>
 
+Sails es el framework MVC más popular para Node.js, diseñado para emular el patrón MVC familiar de frameworks como Ruby on Rails, pero con soporte para los requisitos de aplicaciones modernas: APIs basados en datos con una arquitectura orientada a servicios.
+
 (Fuente: [Sails](http://sailsjs.com/))
 
 <a href="#cabecera">A la cabecera</a>
@@ -58,20 +60,38 @@ El tema de la práctica es: `Sails`
 <a name="assets"></a>
 ### Assets
 
+Se refieren a archivos estáticos (js, css, imágenes, etc) en el servidor que se quieren hacer accesibles al mundo exterior. En Sails, estos archivos se colocan en la carpeta `assets/`. 
+
+(Fuente: [Documentación de Sails](http://sailsjs.com/documentation/concepts/assets))
+
 <a href="#cabecera">A la cabecera</a>
 
 <a name="views"></a>
 ### Views (Vistas)
+
+En Sails, las vistas son plantillas markup que se compilan en el servidor en páginas HTML. En la mayoría de casos, las vistas son usadas como la respuesta a una petición HTTP.
+
+Alternativamente, una vista puede ser compilada directamente en una string HTML para usar en el código de backend. Por ejemplo, para envier emails HTML o construir strings XML para una API de legado.
+
+(Fuente: [Documentación de Sails](http://sailsjs.com/documentation/concepts/views))
 
 <a href="#cabecera">A la cabecera</a>
 
 <a name="pipeline"></a>
 ### Pipeline
 
+Sails utiliza un archivo `pipeline.js` para determinar el orden en que las hojas de estilo, JavaScript y plantillas del lado del cliente deberían ser compiladas y enlazadas como etiquetas `<string>` o `<link>`.
+
+(Fuente: [Documentación de Sails](http://sailsjs.com/documentation/anatomy/tasks/pipeline.js))
+
 <a href="#cabecera">A la cabecera</a>
 
 <a name="controller"></a>
 ### Controllers (Controladores)
+
+Los controladores son los objetos principales en una aplicación Sails, que son responsables de responder a peticiones de un navegador web, aplicación móvil o cualquier otro sistema capaz de comunicarse con un servidor. Usualmente actúan como un middleman entre los modelos y las vistas. para muchas aplicaciones, los controladores contienen la mayoría de la lógica del negocio del proyecto.
+
+(Fuente: [Documentación de Sails](http://sailsjs.com/documentation/concepts/controllers))
 
 <a href="#cabecera">A la cabecera</a>
 
