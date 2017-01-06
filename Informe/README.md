@@ -260,7 +260,7 @@ Y se puede modificar `homepage.ejs` para que contenga otro estilo:
 El resultado al ingresar a la url `http://localhost:1337/` es el siguiente:
 
 <p align="center">
-<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/home.jpg?raw=true">
+<img src="https://github.com/chung-edison/Tec_Web_Js_2016_B/blob/11-Sails%232/Informe/Capturas/home.JPG?raw=true">
 </p>
 
 <a href="#cabecera">A la cabecera</a>
