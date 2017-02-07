@@ -6,26 +6,28 @@
  */
 
 module.exports = {
-    
-    home:function(req,res){
-            
+
+    home: function (req, res) {
+
         // res.view(String: Nombre vista, Datos JSON)
-        
-        return res.view('vistas/home')
-        
+
+        return res.view('vistas/home');
+
     },
-    crearUsuario:function(req,res){
-        
-        return res.view('vistas/crearUsuario')
-        
+    crearUsuario: function (req, res) {
+
+        return res.view('vistas/Usuario/crearUsuario');
+
+    },
+    error: function (req, res) {
+
+        return res.view('vistas/Error', {
+            error: {
+                descripcion:"Usted está por error en esta ruta. Diríjase a Inicio",
+                rawError:"Ruta equivocada",
+                url:"/Inicio"
+            }
+        });
     }
-    
+
 };
-
-
-    
-    
-    
-    
-    
-    
