@@ -32,8 +32,21 @@ module.exports = {
                             }
                         })
                     }
-                    return res.view('vistas/Usuario/crearUsuario');
-                })
+                    Usuario.find().exec(function (err, usuariosEncontrados) {
+                        if (err) {
+                            res.view('vistas/Error', {
+                                error: {
+                                    descripcion: "Hubo un problema cargando los usuarios",
+                                    rawError: err,
+                                    url: "/listarUsuarios"
+                                }
+                            })
+                        }
+                        res.view('vistas/Usuario/listarUsuario.ejs', {
+                            usuarios: usuariosEncontrados
+                        });
+                    });
+                });
             } else {
                 return res.view('vistas/Error', {
                     error: {
@@ -52,5 +65,47 @@ module.exports = {
                 }
             });
         }
+    },
+
+    BorrarUsuario: function (req, res) {
+        var parametros = req.allParams();
+        if (parametros.id) {
+            Usuario.destroy({
+                id: parametros.id
+            }).exec(function (err, usuarioRemovido) {
+                if (err) {
+                    res.view('vistas/Error', {
+                        error: {
+                            descripcion: "Tuvimos un error inesperado",
+                            rawError: err,
+                            url: "/listarUsuarios"
+                        }
+                    });
+                }
+                Usuario.find().exec(function (err, usuariosEncontrados) {
+                    if (err) {
+                        res.view('vistas/Error', {
+                            error: {
+                                descripcion: "Hubo un problema cargando los usuarios",
+                                rawError: err,
+                                url: "/listarUsuarios"
+                            }
+                        });
+                    }
+                    res.view('vistas/Usuario/listarUsuario.ejs', {
+                        usuarios: usuariosEncontrados
+                    });
+                })
+            })
+        } else {
+            res.view('vistas/Error', {
+                error: {
+                    descripcion: "Necesitamos el ID para borrar al usuario.",
+                    rawError: "No envía ID",
+                    url: "/listarUsuarios"
+                }
+            });
+        }
     }
+
 };

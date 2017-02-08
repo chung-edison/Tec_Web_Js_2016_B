@@ -1,5 +1,13 @@
 <h1>Lista de Usuarios</h1>
-<p>Aquí se listan todos los usuarios del sistema de mascotas</p>
+
+<div class="row">
+    <div class="col-sm-9">
+        <p>Aquí se listan todos los usuarios del sistema de mascotas</p>
+    </div>
+    <div class="col-sm-3">
+        <a href="/CrearUsuario" class="btn btn-black btn-success">Crear Usuario</a>
+    </div>
+</div>
 
 <% for(var i=0; i<usuarios.length;i++){ %>
 
@@ -23,7 +31,10 @@
             </div>
         </div>
 
-        <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+            <a href="/Usuario/BorrarUsuario?id=<%= usuarios[i].id %>" class="btn btn-block btn-danger">X</a>
+            <a href="/Usuario/EditarUsuario?id=<%= usuarios[i].id %>" class="btn btn-block btn-info">Edit</a>
+        </div>
     </div>
 
     <% }%>
