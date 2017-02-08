@@ -38,6 +38,8 @@ module.exports.routes = {
 
     'get /CrearUsuario': 'RutasController.crearUsuario',
 
+    'get /ListarUsuarios': 'RutasController.listarUsuario',
+    
     'get /Error': 'RutasController.error'
 
 

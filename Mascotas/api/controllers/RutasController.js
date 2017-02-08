@@ -19,13 +19,29 @@ module.exports = {
         return res.view('vistas/Usuario/crearUsuario');
 
     },
+    listarUsuario: function (req, res) {
+        Usuario.find().exec(function (err, usuariosEncontrados) {
+            if (err) {
+                res.view('vistas/Error', {
+                    error: {
+                        descripcion: "Hubo un problema cargando los usuarios",
+                        rawError: err,
+                        url: "/listarUsuarios"
+                    }
+                })
+            }
+            res.view('vistas/Usuario/listarUsuario.ejs', {
+                usuarios: usuariosEncontrados
+            });
+        })
+    },
     error: function (req, res) {
 
         return res.view('vistas/Error', {
             error: {
-                descripcion:"Usted está por error en esta ruta. Diríjase a Inicio",
-                rawError:"Ruta equivocada",
-                url:"/Inicio"
+                descripcion: "Usted está por error en esta ruta. Diríjase a Inicio",
+                rawError: "Ruta equivocada",
+                url: "/Inicio"
             }
         });
     }

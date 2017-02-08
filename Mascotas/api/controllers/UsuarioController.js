@@ -16,7 +16,7 @@ module.exports = {
             if (parametros.nombres && parametros.apellidos) {
                 var usuarioCrear = {
                     nombres: parametros.nombres,
-                    apellidos: paramentros.apellidos,
+                    apellidos: parametros.apellidos,
                     correo: parametros.correo
                 }
                 if (parametros.correo == "") {
