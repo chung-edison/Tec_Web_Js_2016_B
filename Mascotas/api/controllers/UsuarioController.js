@@ -115,17 +115,21 @@ module.exports = {
             var usuarioAEditar = {
                 nombres: parametros.nombres,
                 apellidos: parametros.apellidos,
-                correo: parametros.correo
+                correo: parametros.correo,
+                password: parametros.password
             }
 
             if (usuarioAEditar.nombres == "") {
                 delete usuarioAEditar.nombres
             }
             if (usuarioAEditar.apellidos == "") {
-                delete usuarioAEditar.nombres
+                delete usuarioAEditar.apellidos
             }
             if (usuarioAEditar.correo == "") {
-                delete usuarioAEditar.nombres
+                delete usuarioAEditar.correo
+            }
+            if (usuarioAEditar.password == "") {
+                delete usuarioAEditar.password
             }
 
             Usuario.update({

@@ -5,6 +5,8 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+var Psswords = require('machinepack-passwords')
+
 module.exports = {
 
     attributes: {
@@ -21,7 +23,8 @@ module.exports = {
         correo: {
             type: 'string',
             email: true,
-            defaultsTo: 'correo@invalido.com'
+            required: true,
+            unique: true
         },
         password: {
             type: 'string',
