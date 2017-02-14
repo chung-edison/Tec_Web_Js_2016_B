@@ -110,7 +110,7 @@ module.exports = {
 
     editarUsuario: function (req, res) {
         var parametros = req.allParams();
-        if (parametros.id && (parametros.nombres || parametros.apellidos || parametros.correo)) {
+        if (parametros.idUsuario && (parametros.nombres || parametros.apellidos || parametros.correo)) {
 
             var usuarioAEditar = {
                 nombres: parametros.nombres,
