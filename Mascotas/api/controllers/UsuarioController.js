@@ -19,15 +19,12 @@ module.exports = {
                     apellidos: parametros.apellidos,
                     correo: parametros.correo
                 }
-                if (parametros.correo == "") {
-                    delete usuarioCrear.correo;
-                }
                 Usuario.create(usuarioCrear).exec(function (err, usuarioCreado) {
                     if (err) {
                         return res.view('vistas/Error', {
                             error: {
                                 descripcion: "Fallo al crear un usuario.",
-                                rawError: "err",
+                                rawError: err,
                                 url: "/CrearUsuario"
                             }
                         })
@@ -42,7 +39,7 @@ module.exports = {
                                 }
                             })
                         }
-                        res.view('vistas/Usuario/listarUsuario.ejs', {
+                        res.view('vistas/Usuario/listarUsuario', {
                             usuarios: usuariosEncontrados
                         });
                     });
