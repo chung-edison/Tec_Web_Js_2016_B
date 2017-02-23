@@ -11,7 +11,9 @@ export class AppComponent implements OnInit {
   apellido: string = "";
   colorH4 = "red";
   tamanioH4 = "52px";
-  class = "btn btn-success";
+  class = "btn btn-block btn-success";
+
+  nuevaTienda: any = {};
 
   constructor() {
     this.apellido = "Chung";
@@ -29,12 +31,16 @@ export class AppComponent implements OnInit {
     return `${this.nombre} ${this.apellido}`;
   }
 
-  hizoClic(){
+  hizoClic() {
     console.log("Clic!");
   }
 
-  hizoFocus(){
+  hizoFocus() {
     console.log("Focus!");
+  }
+
+  crearTienda(formulario) {
+    console.log(formulario);
   }
 }
 
