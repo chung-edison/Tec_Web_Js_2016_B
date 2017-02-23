@@ -1,2 +1,7 @@
-## Levantar en otro puerto
-`>node app.js --port 1338`
+## Angular/CLI
+Nuevo proyecto
+```
+>ng new [nombreProyecto]
+>cd [nombreProyecto]
+>ng serve
+```
