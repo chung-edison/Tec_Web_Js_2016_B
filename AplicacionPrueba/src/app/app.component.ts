@@ -8,46 +8,33 @@ import {MasterURLService} from "./services/master-url.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title: string = "Hola Amigos";
-  nombre: string = "";
-  apellido: string = "";
-  colorH4 = "red";
-  tamanioH4 = "52px";
-  class = "btn btn-block btn-success";
-
-  error: string = "No hay errores";
-
+  title: string = "Bienvenido a Ingresar Tiendas";
   nuevaTienda: any = {};
+  tiendas = [];
 
   disabledButtons = {
-    NuevaTiendaFormSubmitButton:false
+    NuevaTiendaFormSubmitButton: false
   }
 
   constructor(private _http: Http, private _masterURL: MasterURLService) {
-    this.apellido = "Chung";
-    this.nombre = "Edison";
-    console.log("Inicio el constructor.");
   }
 
   ngOnInit() {
-    this.apellido = "Liu";
-    this.nombre = "Alejandro";
-    console.log("On Init");
-  }
+    this._http.get(this._masterURL.url + "Tienda")
+      .subscribe(
+        (res) => {
+          console.log(res.json());
+          this.tiendas = res.json();
 
-  nombreCompleto(): string {
-    return `${this.nombre} ${this.apellido}`;
-  }
-
-  hizoClic() {
-    console.log("Clic!");
-  }
-
-  hizoFocus() {
-    console.log("Focus!");
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
   }
 
   crearTienda(formulario) {
+    this.disabledButtons.NuevaTiendaFormSubmitButton = true;
     console.log(formulario);
     this._http.post(this._masterURL.url + "Tienda", {
       nombre: formulario.value.nombre
@@ -57,6 +44,7 @@ export class AppComponent implements OnInit {
         this.nuevaTienda = {};
       },
       (err) => {
+        this.disabledButtons.NuevaTiendaFormSubmitButton = false;
         console.log("Error", err);
       },
       () => {

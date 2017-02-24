@@ -15,19 +15,32 @@
       <form (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
         <div class="form-group">
           <label>Tienda</label>
+          <div class="animated slideInUp" [hidden]="!nombre.errors">
+            <span class="bg-danger" *ngIf="nombre.errors && (nombre.dirty || nombre.touched)">Ingrese un nombre con mínimo 4 caracteres.</span>
+          </div>
           <input required
                  minlength="4"
                  type="text"
                  class="form-control"
                  placeholder="Digite un nombre de tienda como: Adidas"
                  name="nombre"
-                 [(ngModel)]="nuevaTienda.nombre">
-          <button [disabled]=".NuevaTiendaFormSubmitButton||!NuevaTiendaForm.valid" type="submit" class="btn btn-block btn-success">Crear</button>
+                 [(ngModel)]="nuevaTienda.nombre"
+                 #nombre="ngModel"
+                 #nombreElm>
+          <button [disabled]="NuevaTiendaFormSubmitButton||!NuevaTiendaForm.valid" type="submit"
+                  class="btn btn-block btn-success">Crear
+          </button>
         </div>
       </form>
     </div>
-    <div class="col-sm-6">
-      <h3>{{nuevaTienda.nombre}}</h3>
+    <!--<div class="col-sm-6">-->
+    <!--<pre>{{tiendas | json}}</pre>-->
+    <!--</div>-->
+  </div>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let tienda of tiendas">
+      <h3>Nombre: {{tienda.nombre}}</h3>
+      <p>ID: {{tienda.id}}</p>
     </div>
   </div>
 </div>
