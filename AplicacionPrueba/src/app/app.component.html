@@ -2,17 +2,33 @@
   {{title}}
 </h1>
 
+<h2>{{error}}</h2>
+
 <div class="container">
-  <form (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
-    <div class="form-group">
-      <label>Tienda</label>
-      <input type="text"
-             class="form-control"
-             placeholder="Digite un nombre de tienda como: Adidas"
-             name="nombre"
-             [(ngModel)]="nuevaTienda.nombre">
-      <button type="submit" class="btn btn-block btn-success">Crear</button>
+  <div class="row">
+    <div class="col-sm-12">
+      <pre>
+        {{nuevaTienda | json}}
+      </pre>
     </div>
-  </form>
+    <div class="col-sm-6">
+      <form (ngSubmit)="crearTienda(NuevaTiendaForm)" #NuevaTiendaForm="ngForm">
+        <div class="form-group">
+          <label>Tienda</label>
+          <input required
+                 minlength="4"
+                 type="text"
+                 class="form-control"
+                 placeholder="Digite un nombre de tienda como: Adidas"
+                 name="nombre"
+                 [(ngModel)]="nuevaTienda.nombre">
+          <button [disabled]=".NuevaTiendaFormSubmitButton||!NuevaTiendaForm.valid" type="submit" class="btn btn-block btn-success">Crear</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <h3>{{nuevaTienda.nombre}}</h3>
+    </div>
+  </div>
 </div>
 

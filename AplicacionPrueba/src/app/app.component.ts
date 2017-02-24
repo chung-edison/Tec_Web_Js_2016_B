@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Response, Http} from "@angular/http";
+import {MasterURLService} from "./services/master-url.service";
 
 @Component({
   selector: 'app-root',
@@ -13,9 +15,15 @@ export class AppComponent implements OnInit {
   tamanioH4 = "52px";
   class = "btn btn-block btn-success";
 
+  error: string = "No hay errores";
+
   nuevaTienda: any = {};
 
-  constructor() {
+  disabledButtons = {
+    NuevaTiendaFormSubmitButton:false
+  }
+
+  constructor(private _http: Http, private _masterURL: MasterURLService) {
     this.apellido = "Chung";
     this.nombre = "Edison";
     console.log("Inicio el constructor.");
@@ -41,6 +49,19 @@ export class AppComponent implements OnInit {
 
   crearTienda(formulario) {
     console.log(formulario);
+    this._http.post(this._masterURL.url + "Tienda", {
+      nombre: formulario.value.nombre
+    }).subscribe((res) => {
+        console.log("No hubo errores");
+        console.log(res);
+        this.nuevaTienda = {};
+      },
+      (err) => {
+        console.log("Error", err);
+      },
+      () => {
+        console.log("Termino la funcion");
+      });
   }
 }
 
