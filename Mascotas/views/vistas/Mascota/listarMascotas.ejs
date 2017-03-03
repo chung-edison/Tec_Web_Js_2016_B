@@ -1,0 +1,34 @@
+<h1>Lista de Mascotas</h1>
+<div class="row">
+  <div class="col-sm-9">
+    <p>Aquí se listan todos las mascotas registradas en el sistema</p>
+  </div>
+  <div class="col-sm-3">
+    <a href="/CrearMascota" class="btn btn-black btn-success">Crear Mascota</a>
+  </div>
+</div>
+<% for(var i = 0; i < mascotas.length; i++){ %>
+<div class="row ma-margen-top-bottom">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-9 text-center">
+    <div class="text-center ma-borde" style="margin-top: 40px;">
+      <% mascotas[i].fechaNacimiento.setUTCDate(15) %>
+      <h3 class="text-center"> ID: <%= mascotas[i].id %> - <%= mascotas[i].nombre %></h3>
+      <h4 class="text-center"> Dia: <%= mascotas[i].fechaNacimiento.getDay() %>
+        Mes: <%= mascotas[i].fechaNacimiento.getMonth() %> Año: <%= mascotas[i].fechaNacimiento.getFullYear() %></h4>
+      <p class="text-center">
+        <%= mascotas[i].paisNacimiento %>
+      </p>
+    </div>
+  </div>
+  <div class="col-sm-2">
+    <a href="/Mascota/destroy/<%= mascotas[i].id %>">
+      <button class="btn btn-block btn-danger">X</button>
+    </a>
+    <br>
+    <a href="/EditarMascota?id=<%= mascotas[i].id %>">
+      <button class="btn btn-block btn-info">Editar</button>
+    </a>
+  </div>
+</div>
+<% } %>

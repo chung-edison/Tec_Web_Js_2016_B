@@ -1,0 +1,29 @@
+<h1>Lista de Razas</h1>
+<div class="row">
+  <div class="col-sm-9">
+    <p>Aquí se listan todos las razas registradas en el sistema</p>
+  </div>
+  <div class="col-sm-3">
+    <a href="/CrearRaza" class="btn btn-black btn-success">Registrar Raza</a>
+  </div>
+  <br>
+  <br>
+</div>
+<% for(var i = 0; i < razas.length; i++){ %>
+<div class="row">
+  <div class="col-sm-9 text-center">
+    <div class="ma-borde">
+      <h3><%= razas[i].nombre %></h3>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <a href="/Raza/destroy/<%= razas[i].id %>">
+      <button class="btn btn-block btn-danger">Borrar</button>
+    </a>
+    <a href="/EditarRaza?id=<%= razas[i].id %>">
+      <button class="btn btn-block btn-info">Editar</button>
+    </a>
+  </div>
+</div>
+<% } %>
+

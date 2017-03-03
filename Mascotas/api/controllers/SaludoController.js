@@ -5,12 +5,12 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-var nodemailer = require('nodemailer');
+//var nodemailer = require('nodemailer');
 
 module.exports = {
 
     hola: function (req, res) {
-        
+
 //        var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
 //        var mailOptions = {
 //    from: '"Fred Foo ?" <foo@blurdybloop.com>', // sender address
@@ -21,24 +21,24 @@ module.exports = {
 //};
 
 
-        
+
         var parametros = req.allParams()
 
         if (req.method == 'GET') {
-            
+
             res.json({
                     nombre: 'hola post',
                     para:parametros
                 });
-            
+
 //            transporter.sendMail(mailOptions, function(error, info){
 //                if(error){
 //                    return console.log(error);
 //                }
 //                console.log('Message sent: ' + info.response);
-//                            
+//
 //                    res.send('ok');
-//                
+//
 //            });
 
 
@@ -65,7 +65,7 @@ module.exports = {
     hora: function (req, res) {
         res.send('Hora');
     }
-    
-    
+
+
 
 };

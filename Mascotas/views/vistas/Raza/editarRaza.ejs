@@ -1,0 +1,15 @@
+<h1>Editar Raza</h1>
+
+<div class="row">
+  <div class="col-sm-12">
+    <form action="Raza/editarRaza" method="post">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input required type="text" class="form-control" placeholder="Nombre" name="nombre" value="<%=raza.nombre%>">
+      </div>
+      <br>
+      <input type="hidden" name="id" value="<%= raza.id %>">
+      <button type="submit" class="btn btn-success">Actualizar Raza</button>
+    </form>
+  </div>
+</div>
